@@ -15,7 +15,7 @@ class StandardResultsSetPagination(PageNumberPagination):
 class MovieViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)     
     pagination_class = StandardResultsSetPagination
-    queryset = Movie.objects.all().order_by('name')
+    queryset = Movie.objects.all().order_by('title')
     serializer_class = MovieSerializer
 
     # def create(self,request):

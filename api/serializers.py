@@ -6,4 +6,4 @@ from .models import Movie
 class MovieSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Movie
-        fields = ('id', 'name', 'released_date', 'rating')
+        fields = ('id', 'title', 'release_year', 'rating')
